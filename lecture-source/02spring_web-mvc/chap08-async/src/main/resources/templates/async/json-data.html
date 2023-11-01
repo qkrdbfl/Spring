@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json-data</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>JSON 데이터 서버 전송 테스트</h1>
+
+<h3>회원 정보 입력</h3>
+<table>
+    <tr>
+        <td>닉네임</td>
+        <td><input type="text" name="nickname" id="nickname"/></td>
+    </tr>
+    <tr>
+        <td>나이</td>
+        <td><input type="number" name="age" id="age"/></td>
+    </tr>
+    <tr>
+        <td>이메일</td>
+        <td><input type="email" name="email" id="email"/></td>
+    </tr>
+    <tr>
+        <td>가입일</td>
+        <td><input type="date" name="registDate" id="registDate"/></td>
+    </tr>
+</table>
+
+<button onclick="sendJquery()">jQuery로 전송</button>
+<button onclick="sendFetch()">fetch로 전송</button>
+
+<script>
+    function sendJquery() {
+
+        const nickname = document.querySelector("#nickname").value;
+        const age = document.querySelector("#age").value;
+        const email = document.querySelector("#email").value;
+        const registDate = document.querySelector("#registDate").value;
+
+        const userInfo = { nickname, age, email, registDate };
+        const userInfoList = [userInfo, userInfo, userInfo];
+        // user data 1명 전송
+        //const json = JSON.stringify(userInfo);
+        // user data 3명 배열로 전송
+        const json = JSON.stringify(userInfoList);
+
+        console.log("userInfo", userInfo);
+        console.log("userInfoList", userInfoList);
+        console.log("json", json);
+
+        const onError = xhr => console.log(xhr);
+        const onSuccess = data => console.log(data);
+
+        $.ajax({
+            url : '/jquery/json',
+            method : 'POST',
+            data : json,
+            contentType : 'application/json; charset=UTF-8',
+            error : onError,
+            success : onSuccess
+        });
+
+    }
+
+    async function sendFetch() {
+
+        const nickname = document.querySelector("#nickname").value;
+        const age = document.querySelector("#age").value;
+        const email = document.querySelector("#email").value;
+        const registDate = document.querySelector("#registDate").value;
+
+        const userInfo = { nickname, age, email, registDate };
+        const userInfoList = [userInfo, userInfo, userInfo];
+        // user data 1명 전송
+        //const json = JSON.stringify(userInfo);
+        // user data 3명 배열로 전송
+        const json = JSON.stringify(userInfoList);
+
+        console.log("userInfo", userInfo);
+        console.log("userInfoList", userInfoList);
+        console.log("json", json);
+
+        const response = await fetch('/fetch/json', {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json; charset=UTF-8'
+            },
+            body : json
+        });
+
+        const result = await response.text();
+        console.log(result);
+
+    }
+</script>
+
+<h1>JSON 데이터 서버 응답 테스트</h1>
+<h3>테이블로 회원 정보 불러오기</h3>
+<table class="userInfo"></table>
+
+<button onclick="receiveJquery()">jQuery로 전송 후 응답 처리</button>
+<button onclick="receiveFetch()">fetch로 전송 후 응답 처리</button>
+
+<script>
+
+    function createTrString(user) {
+        return `
+            <tr>
+                <td>아이디 : ${user.id}</td>
+                <td>닉네임 : ${user.nickname}</td>
+                <td>나이 : ${user.age}</td>
+                <td>이메일 : ${user.email}</td>
+                <td>가입일 : ${user.registDate}</td>
+            </tr>
+            `;
+    }
+
+    function receiveJquery() {
+        $.ajax({
+            url : '/jquery/json',
+            method : 'GET',
+            error : xhr => console.log(xhr),
+            success : responseJson => {
+                const table = document.querySelector(".userInfo");
+                table.innerHTML = responseJson.map(item => createTrString(item)).join('');
+            }
+        });
+    }
+
+    async function receiveFetch() {
+        const response = await fetch('/fetch/json');
+        const responseJson = await response.json();
+        const table = document.querySelector(".userInfo");
+        table.innerHTML = responseJson.map(item => createTrString(item)).join('');
+    }
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

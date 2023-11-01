@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dcb6b670-fbba-4c57-8601-73674c5ecc0d" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/01Spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap02-dependency-Injection/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap02-dependency-Injection/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap02-dependency-Injection/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap03-di-annotation/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap03-di-annotation/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap03-di-annotation/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap03-di-annotation/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap04-bean/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap04-bean/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap04-bean/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap04-bean/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap05-aop/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap05-aop/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap05-aop/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chap05-aop/.idea/uiDesigner.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2VqMShUnYkhVnne1oWbGda3w3Qo" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Lecture11111/Spring/02spring_web-mvc/chap09-crud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="dcb6b670-fbba-4c57-8601-73674c5ecc0d" name="변경" comment="" />
+      <created>1695559158593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695559158593</updated>
+      <workItem from="1695559159603" duration="661000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

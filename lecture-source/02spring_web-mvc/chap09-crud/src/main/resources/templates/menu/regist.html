@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regist</title>
+</head>
+<body>
+    <div th:include="common/header.html"></div>
+
+    <h3>신규 메뉴 등록</h3>
+    <form action="/menu/regist" method="post">
+        <label>메뉴 이름 : </label><input type="text" name="name"><br>
+        <label>메뉴 가격 : </label><input type="number" name="price"><br>
+        <label>카테고리 코드</label>
+
+        <select name="categoryCode" id="categoryCode"></select><br>
+
+        <label>판매 상태 : </label>
+        <select name="orderableStatus">
+            <option>Y</option>
+            <option>N</option>
+        </select><br>
+        <input type="submit">
+    </form>
+
+    <script>
+        fetch('/menu/category').then(res => res.json()).then(data => {
+
+            const $categoryCode = document.querySelector("#categoryCode");
+
+            data.forEach(category => {
+                const $option = document.createElement('option'); //createElement는 꺼내오는 역할인가?
+                $option.textContent = category.name;
+                $option.value = category.code;
+                $categoryCode.appendChild($option);
+            });
+        });
+    </script>
+</body>
+</html>

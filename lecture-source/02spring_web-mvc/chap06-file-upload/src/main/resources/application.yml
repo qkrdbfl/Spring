@@ -1,0 +1,6 @@
+spring:
+  servlet:
+    multipart:
+      location : C:/Lecture11111/02Spring/chap06-file-upload
+      max-file-size: 10MB
+      max-request-size: 10MB

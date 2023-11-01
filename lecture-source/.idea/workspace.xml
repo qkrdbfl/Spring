@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb3544aa-95d5-4ea4-9f31-9ce96b2198ac" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/03spring_security/.idea/03spring_security.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03spring_security/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03spring_security/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03spring_security/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03spring_security/.idea/modules/sessionlogin.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/04spring_comprehensive.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/modules/comprehensive.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/.idea/01Spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap01-ioc-container/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap01-ioc-container/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/01spring_code/chap01-ioc-container/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap01-ioc-container/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/01spring_code/chap01-ioc-container/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap01-ioc-container/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap02-dependency-Injection/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap02-dependency-Injection/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap02-dependency-Injection/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap03-di-annotation/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap03-di-annotation/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap03-di-annotation/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap03-di-annotation/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap04-bean/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap04-bean/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap04-bean/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap04-bean/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap05-aop/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap05-aop/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap05-aop/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01spring_code/chap05-aop/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02spring_web-mvc/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02spring_web-mvc/.idea/02Spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02spring_web-mvc/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02spring_web-mvc/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02spring_web-mvc/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03spring_security/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03spring_security/.idea/03Spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03spring_security/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/03spring_security/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03spring_security/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/03spring_security/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03spring_security/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/03spring_security/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/.idea/04Spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/java/com/ohgiraffers/comprehensive/board/controller/ThumbnailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/java/com/ohgiraffers/comprehensive/board/controller/ThumbnailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/java/com/ohgiraffers/comprehensive/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/java/com/ohgiraffers/comprehensive/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/resources/templates/board/boardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/resources/templates/board/boardList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/resources/templates/thumbnail/thumbnailDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/04spring_comprehensive/chap01-comprehensive/src/main/resources/templates/thumbnail/thumbnailDetail.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/01spring_code" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2XZ2iieQfTlBcc3qC1a21jgzOwM" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/a/Spring",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="eb3544aa-95d5-4ea4-9f31-9ce96b2198ac" name="변경" comment="" />
+      <created>1698822409946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698822409946</updated>
+      <workItem from="1698822410966" duration="31000" />
+      <workItem from="1698822463058" duration="119000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

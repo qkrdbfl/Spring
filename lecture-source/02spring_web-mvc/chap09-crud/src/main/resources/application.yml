@@ -1,0 +1,21 @@
+# spring datasource config
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: C##OHGIRAFFERS
+    password: OHGIRAFFERS
+
+# mybatis config
+mybatis:
+  mapper-locations: mappers/**/*.xml
+
+#logging config
+#logging:
+#  level:
+#    root: debug
+
+#logging:
+#  file:
+#    name: myapp.log
+#    path: C:/Lecture11111/02Spring/chap09-crud //로그남기는 방법 테스트

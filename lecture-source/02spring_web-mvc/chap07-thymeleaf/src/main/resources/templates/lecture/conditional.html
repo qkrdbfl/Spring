@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conditional</title>
+</head>
+<body>
+    <h1>제어문</h1>
+    <h2>if / else</h2>
+
+    <!--조건에 해당 되면-->
+    <p th:if="${num > 0}">넘어온 값은 0보다 크다.</p>
+    <p th:if="${num < 0}">넘어온 값은 0보다 작다.</p>
+    <!--조건에 해당 되지 않으면-->
+    <p th:unless="${num > 0}">넘어온 값은 0보다 크지 않다.</p>
+    <p th:unless="${num < 0}">넘어온 값은 0보다 작지 않다.</p>
+
+    <!--th:block 을 활용-->
+    <th:block th:if="${str == '바나나'}">
+        <p>바나나 좋아요..</p>
+        <p>바나나 정말 좋아요..</p>
+        <p>바나나 정말 정말 좋아요.. p태그 여러가지 들어가요</p>
+    </th:block>
+    <th:block th:if="${str == '사과'}">
+        <p>사과 좋아요..</p>
+    </th:block>
+
+    <!--and나 or을 사용해서 다중 조건 처리-->
+    <p th:if="${num > 0 and num <= 10}">1부터 10사이의 양수</p>
+    <p th:if="${str != null && str == '바나나'}">바나나 좋아요..</p> <!--일치해야 출력됨-->
+
+    <!--#strings 라는 타임리프에서 재공되는 Utility Object 메소드에서 null 처리가 가능하다-->
+    <p th:if="${!#strings.isEmpty(str) and str =='바나나'}">바나나 이제 싫어요..</p> <!--isEmpty : 빈 문자열이냐 아니냐-->
+
+    <h2>switch/case</h2>
+    <th:block th:switch="${str}">
+        <span th:case="사과">사과가 선택 됐다.</span>
+        <span th:case="바나나">바나나가 선택 됐다.</span>
+    </th:block>
+
+    <h2>each</h2>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+            <th>주소</th>
+        </tr>
+        <tr th:each="member : ${ memberList }">
+            <td th:text="${ member.name }"></td>
+            <td th:text="${ member.age }"></td>
+            <td th:text="${ member.gender }"></td>
+            <td th:text="${ member.address }"></td>
+        </tr>
+    </table>
+
+    <!--th:each에 stat을 추가해서 반복 상태를 확인 할수 있다-->
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+            <th>주소</th>
+            <th>index</th>
+            <th>count</th>
+            <th>size</th>
+            <th>current</th>
+            <th>even</th>
+            <th>odd</th>
+            <th>first</th>
+            <th>last</th>
+        </tr>
+        <tr th:each="member, stat : ${ memberList }">
+            <td th:text="${ member.name }"></td>
+            <td th:text="${ member.age }"></td>
+            <td th:text="${ member.gender }"></td>
+            <td th:text="${ member.address }"></td>
+            <td th:text="${ stat.index }"></td>
+            <td th:text="${ stat.count }"></td>
+            <td th:text="${ stat.size }"></td>
+            <td th:text="${ stat.current }"></td>
+            <td th:text="${ stat.even }"></td>
+            <td th:text="${ stat.odd }"></td>
+            <td th:text="${ stat.first }"></td>
+            <td th:text="${ stat.last }"></td>
+        </tr>
+    </table>
+    <!-- th:each에 stat을 추가하지 않으면 '변수명+Stat'으로 반복상태를 확인할 수 있다. -->
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+            <th>주소</th>
+            <th>index</th>
+            <th>count</th>
+            <th>size</th>
+            <th>current</th>
+            <th>even</th>
+            <th>odd</th>
+            <th>first</th>
+            <th>last</th>
+        </tr>
+        <tr th:each="member: ${ memberList }">
+            <td th:text="${ member.name }"></td>
+            <td th:text="${ member.age }"></td>
+            <td th:text="${ member.gender }"></td>
+            <td th:text="${ member.address }"></td>
+            <td th:text="${ memberStat.index }"></td>
+            <td th:text="${ memberStat.count }"></td>
+            <td th:text="${ memberStat.size }"></td>
+            <td th:text="${ memberStat.current }"></td>
+            <td th:text="${ memberStat.even }"></td>
+            <td th:text="${ memberStat.odd }"></td>
+            <td th:text="${ memberStat.first }"></td>
+            <td th:text="${ memberStat.last }"></td>
+        </tr>
+    </table>
+
+    <h3>#number Utiltity Object를 이용한 반복문</h3>
+    <th:block th:each="num : ${#numbers.sequence(5,10)}"> <!--5부터 10까지 사이의 번호-->
+        <a th:href="@{|numbering/${numStat.count}|}" th:text="번호 + ${num}"></a> <!--@는 링크 표현식임-->
+    </th:block>
+
+
+</body>
+</html>

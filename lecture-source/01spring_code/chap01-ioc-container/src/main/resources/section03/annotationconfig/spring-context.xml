@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--위의 xmlns:context="http://www.springframework.org/schema/context"  추가됨-->
+    
+    <!--Test 1-->
+<!--    <context:component-scan base-package="com.ohgiraffers"/>-->
+
+    <!--Test 2 : exclude filter-->
+    <context:component-scan base-package="com.ohgiraffers">
+        <context:exclude-filter type="assignable" expression="com.ohgiraffers.common.MemberDAO"/>
+    </context:component-scan>
+
+
+</beans>

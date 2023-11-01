@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>expression</title>
+</head>
+<body>
+    <h1>표현식</h1>
+    <h2>주석</h2>
+    <ul>
+        <li>parser-level 주석</li>
+        <!--/* 클라이언트 한테 안보이는 주석내용 */--> <!--타임리프 용 주석임-->
+        <li>prototype-only 주석</li>
+        <!--/*/ 문서상에 출력이 되는 주석내용 /*/--> <!-- ..? 어차피 나오는데 이거 왜 씀? -->
+    </ul>
+
+    <h2>표현식1 - 변수 표현식</h2>
+    <p th:text="${param.title}"></p>
+    <p th:text="${param.no[0]}"></p>
+    <p th:text="${param.no[1]}"></p>
+    <!-- 파라미터가 존재하지 않으면 무시하지 않고 에러 발생함 -->
+    <!-- <p th:text="${ param.no[2] }"></p> -->
+
+    <h2>표현식2 - 메세지 표현식</h2>
+    <p th:text="#{message.value}"></p>
+
+    <h2>표현식3 - 링크 표현식</h2>
+    <a th:href="@{/}">메인으로</a>
+
+    <h2>표현식4 - 선택 변수 표현식</h2>
+    <p th:text="${ member.name }"></p>
+    <p th:object="${ member }" th:text="*{ age }"></p>
+    <p th:object="${ member }" th:text="*{ gender }"></p>
+    <!--아래처럼 오브젝트 써서 이렇게 사용할 수도 있음-->
+    <div th:object="${ member }" >
+        <p th:text="*{ address }"></p>
+    </div>
+
+    <h3>escape 테스트</h3>
+    <ul>
+        <li th:text="${hello}"></li> <!--이건 컨트롤러 클래스에 쓴 태그값 포함한 문자코드 그대로 출력됨-->
+        <li th:utext="${hello}"></li> <!--이건 hello 만 출력-->
+        <li><input type="text" th:value="${hello}"></li>
+    </ul>
+
+    <h2>표현식5 - 인라인 표현식</h2>
+    <p th:inline="none">
+        변수 표현식의 값을 html에 직접 표현하기 위해서 th:text와 같은 [[...]]를 사용하고 th:utext와 같은 [[...]]를 사용할 수 있다.
+        대괄호로 묶어 이와 같이 변수 표현식의 값을 가져오는 것을 인라인 모드라고 하며 인라인 모드는 text 모드와 javascript 모드가 있다.
+        우리는 변수 표현식의 값을 자바스크립트에서 쓰는 것이 아닌 html에서 사용하려는 것이므로 th:inline="text"를 태그에 속성값으로 주고 써야 하지만
+        해당 값이 기본 값이므로 명시하지 않는다. 반명 인라인 모드를 적용하지 않으려고 하면 th:inline="none"을 속성 값으로 주어야 한다.
+        th:inline="javascript"도 기본 값으로 명시되어 있어 명시할 필요가 없다.
+    </p>
+    <ul>
+        <li th:inline="text">[[${hello}]]</li> <!--명시를 했냐-->
+        <li>[(${hello})]</li><!--명시를 안했냐--> <!--차이지만 다를게 없음-->
+        <li th:inline="none">[[${hello}]]</li> <!--대괄호를 썼냐-->
+        <li th:inline="none">[[$(hello)]]</li> <!--중괄호를 썼냐--> <!--차이-->
+    </ul>
+    <script th:inline="javascript">
+        window.onload = function (){
+            /* 동적 페이지에서는 정상 동작 하지만 정적 페이지에서는 자바스크립트 문법 오류가 발생한다.
+             * (리터럴 형태가 아니라서) */
+            // let hello = [[${hello}]];
+            /* 정적 페이지에서는 정상 동작 하지만 동적 페이지에서는 ""[[${hello}]]""가 되어 오류가 발생한다. */
+            // let hello = "[[${hello}]]";
+            /* 정적 페이지와 동적 페이지 모두 문제가 발생하지 않는다. */
+            let hello = '[[${hello}]]';
+            alert(hello);
+        }
+    </script>
+
+    <h2>리터럴 치환</h2>
+    <p th:object="${member}" th:text="|name =*{name}|"></p>
+    <p th:object="${member}" th:text="|age =*{age}|"></p>
+    <p th:object="${member}" th:text="|gender =*{gender}|"></p>
+    <p th:object="${member}" th:text="|address =*{address}|"></p>
+
+    <h2>th:block</h2>
+    <th:div th:object="${member}">
+        <p th: text="*{age}"></p>
+    </th:div>
+    <th:block th:object="${member}">
+        <p th: text="*{age}"></p>
+    </th:block>
+</body>
+</html>

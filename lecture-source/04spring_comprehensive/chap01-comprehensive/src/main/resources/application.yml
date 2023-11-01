@@ -1,0 +1,25 @@
+# DB config
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: C##SPRING
+    password: SPRING
+
+#file upload config
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      location: C:/Lecture11111/04Spring/chap01-comprehensive/
+
+
+# Mybatis config
+mybatis:
+  mapper-locations: mappers/**/*.xml
+
+
+
+#image upload dir
+image:
+  image-dir: src/main/resources/upload/
